@@ -539,7 +539,7 @@ img {
   text-transform: uppercase;
 }
 .btn:nth-of-type(1) {
-  top: 327vw;
+  top: 337vw;
   margin-left: 3vw;
   width: 94vw;
 }
@@ -1251,7 +1251,7 @@ img {
     padding: 5vw 5vw;
   }
   .btn:nth-of-type(1) {
-    top: 335vw;
+    top: 317vw;
     margin-left: 25vw;
     width: 50vw;
   }
