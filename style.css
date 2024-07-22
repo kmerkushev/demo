@@ -473,6 +473,10 @@ img {
   text-transform: uppercase;
 }
 
+.es h1 {
+  font-size: 5vw;
+}
+
 .h2 {
   font-size: 4vw;
   color: #F2FFD7;
@@ -524,7 +528,7 @@ img {
   width: 23vw;
   color: #F2FFD7;
   font-size: 10vw;
-  line-height: 3vw;
+  line-height: 0.8;
   background: linear-gradient(to bottom, #FE686A 0%, #EF0104 12%, #C00002 100%);
   text-decoration: none;
   border-radius: 16px;
@@ -682,8 +686,8 @@ img {
   position: fixed;
   color: #002E2A;
   font-size: 7vw;
-  top: 3vw;
-  right: 3vw;
+  top: 2vw;
+  right: 2vw;
   z-index: 9999999;
   margin: 0;
   min-width: 5vw;
@@ -727,6 +731,9 @@ img {
   }
   .btn:nth-of-type(2) {
     bottom: 54vw;
+  }
+  .es h1 {
+    font-size: 10.5vw;
   }
 }
 .maket {
@@ -1131,8 +1138,8 @@ img {
     position: fixed;
     color: #002E2A;
     font-size: 5vw;
-    top: 3%;
-    right: 3%;
+    top: 2vw;
+    right: 2vw;
     z-index: 9999999;
     margin: 0;
     min-width: 5vw;
