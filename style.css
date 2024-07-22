@@ -528,7 +528,7 @@ img {
   width: 23vw;
   color: #F2FFD7;
   font-size: 10vw;
-  line-height: 0.8;
+  line-height: 1;
   background: linear-gradient(to bottom, #FE686A 0%, #EF0104 12%, #C00002 100%);
   text-decoration: none;
   border-radius: 16px;
