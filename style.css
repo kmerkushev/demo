@@ -1548,7 +1548,8 @@ img {
   width: 100%;
   max-width: 1321px;
   text-decoration: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 .meet__card {
@@ -1559,7 +1560,7 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 100px 30px 30px;
   text-decoration: none;
   display: flex;
@@ -1691,8 +1692,9 @@ img {
     font-size: 24px;
   }
   .meet__cards {
-    grid-row-gap: 30px;
-    flex-flow: column;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
   }
   .meet__card {
     max-width: 630px;
@@ -1700,9 +1702,6 @@ img {
   }
   .vectors-wrapper-4 {
     width: 140px;
-    max-width: 100%;
-  }
-  .meet__card-2 {
     max-width: 100%;
   }
   .meet__btn {
@@ -1735,8 +1734,7 @@ img {
     font-size: 18px;
   }
   .meet__cards {
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    gap: 20px;
   }
   .meet__card {
     grid-column-gap: 30px;
