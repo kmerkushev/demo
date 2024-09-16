@@ -1274,17 +1274,6 @@ img {
   box-shadow: 0 0 44px #f97e1a;
 }
 
-.vectors-wrapper-2 {
-  -o-object-fit: cover;
-     object-fit: cover;
-  justify-content: center;
-  align-items: center;
-  width: 80.0003px;
-  height: 90.0519px;
-  text-decoration: none;
-  display: flex;
-}
-
 .control__arrow-down {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1417,16 +1406,14 @@ img {
     flex-flow: column;
     padding: 20px;
   }
-  .vectors-wrapper {
-    width: 69px;
-    height: 60px;
+  .control__problem-icon {
+    width: 88px;
+    height: 77px;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .control__problem-p {
     font-size: 18px;
-  }
-  .control__fact-source {
-    justify-content: flex-start;
-    align-items: flex-start;
   }
   .vectors-wrapper-2 {
     width: 56px;
