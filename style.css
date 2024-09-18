@@ -3079,11 +3079,11 @@ img {
   background-repeat: no-repeat;
   transform: scaleX(-1);
   background-position: top left;
-  width: 545px;
-  height: 40%;
+  width: 295px;
+  aspect-ratio: 1/1.25;
   z-index: 0;
   top: 3%;
-  left: calc(50% - 1020px);
+  left: calc(50% - 750px);
 }
 .take::after {
   content: "";
@@ -3093,7 +3093,7 @@ img {
   background-position: bottom right;
   background-size: 100%;
   width: 689px;
-  height: 1096px;
+  aspect-ratio: 1/1.25;
   z-index: 0;
   bottom: 0%;
   right: calc(50% + 170px);
@@ -3243,8 +3243,17 @@ img {
 .take__phone {
   -o-object-fit: contain;
      object-fit: contain;
+  aspect-ratio: 1/2.1;
 }
 
+@meida screena and (max-width: 1350px) {
+  .take::after {
+    left: calc(50% - 640px);
+    bottom: -4%;
+    right: calc(50% + 170px);
+    transform: translateX(650px);
+  }
+}
 @media screen and (max-width: 1279px) {
   .take__h2 {
     font-size: 64px;
@@ -3260,12 +3269,36 @@ img {
   }
   .take::after {
     right: 4%;
+    width: 640px;
+    z-index: 0;
+    bottom: 3%;
+    right: calc(50% + 170px);
+    transform: translateX(670px);
   }
   .take::before {
-    left: calc(50% - 750px);
+    left: calc(50% - 550px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .take {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .take::after {
+    left: calc(50% - 860px);
   }
 }
 @media screen and (max-width: 991px) {
+  .take::after {
+    right: 4%;
+    width: 510px;
+    bottom: 2%;
+    right: calc(50% + 200px);
+    transform: translateX(680px);
+  }
+  .take::before {
+    left: calc(50% - 460px);
+  }
   .take__inner {
     gap: 40px;
     justify-content: space-between;
@@ -3297,6 +3330,17 @@ img {
     font-size: 14px;
   }
 }
+@media screen and (max-width: 940px) {
+  .take {
+    padding: 0px 30px;
+  }
+  .take::after {
+    left: calc(50% - 860px);
+  }
+  .take::before {
+    left: calc(50% - 460px);
+  }
+}
 @media screen and (max-width: 800px) {
   .take__br {
     display: none;
@@ -3310,10 +3354,11 @@ img {
   }
   .take::after {
     width: 490px;
-    height: 1096px;
     z-index: 0;
-    bottom: 11%;
+    bottom: 6%;
     right: 6%;
+    transform: translateX(0px);
+    left: calc(50% - 160px);
   }
   .take__h2 {
     font-size: 48px;
@@ -3335,6 +3380,10 @@ img {
   }
 }
 @media screen and (max-width: 568px) {
+  .take {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   .take__h2,
   .take__h3 {
     text-align: center;
@@ -3359,10 +3408,11 @@ img {
     left: calc(50% - 260px);
   }
   .take::after {
-    width: 360px;
-    height: 1096px;
-    bottom: -40px;
-    right: 30px;
+    width: 340px;
+    height: 508px;
+    bottom: -20px;
+    right: -40px;
+    left: calc(50% - 100px);
   }
 }
 @media screen and (max-width: 479px) {
