@@ -1034,14 +1034,26 @@ img {
     align-items: center;
     justify-content: center;
     width: 120px;
-    height: 157px;
+    height: 120px;
     background-color: transparent;
     background-image: url("img/icon--menu-close--big.svg");
     background-repeat: no-repeat;
     background-size: 100%;
-    bottom: 65px;
-    left: 80px;
+    top: 60px;
+    left: 60px;
     border: none;
+  }
+  .hero__menu-btn--close::after {
+    content: "CLOSE";
+    position: absolute;
+    top: 130px;
+    left: 32px;
+    font-size: 14px;
+    color: #ffffff;
+    z-index: 999;
+    letter-spacing: 3px;
+    opacity: 0;
+    animation: 0.5s cubic-bezier(0, 0.43, 0.26, 1.22) 0.8s show-caption forwards;
   }
   .hero__links {
     flex-direction: column;
@@ -1222,6 +1234,16 @@ img {
   100% {
     -webkit-backdrop-filter: blur(70px);
             backdrop-filter: blur(70px);
+  }
+}
+@keyframes show-caption {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 .control {
