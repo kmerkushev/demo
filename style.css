@@ -482,7 +482,7 @@ img {
 }
 
 .body {
-  background-color: var(--black);
+  background-color: #212121;
   font-family: Manrope, sans-serif;
   overflow-x: hidden;
 }
@@ -987,7 +987,7 @@ img {
   }
   .hero__top {
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     padding-right: 30px;
   }
@@ -998,10 +998,10 @@ img {
     background-position: 80px 0px;
   }
   .hero__menu-btn {
-    width: 40px;
-    height: 28px;
+    width: 60px;
+    height: 239px;
     background-color: transparent;
-    background-image: url("img/btn--menu.svg");
+    background-image: url("img/icon--menu-open-long.svg");
     background-repeat: no-repeat;
     border: none;
     display: block;
