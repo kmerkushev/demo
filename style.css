@@ -482,7 +482,7 @@ img {
 }
 
 .body {
-  background-color: var(--grey-light);
+  background-color: var(--black);
   font-family: Manrope, sans-serif;
   overflow-x: hidden;
 }
@@ -1039,8 +1039,8 @@ img {
     background-image: url("img/icon--menu-close.svg");
     background-repeat: no-repeat;
     background-size: 100%;
-    top: 50px;
-    right: 20px;
+    top: 70px;
+    right: 40px;
     border: none;
   }
   .hero__links {
@@ -1147,6 +1147,9 @@ img {
   }
   .hero__nav.opened li {
     transform: translate(-100px -30px);
+  }
+  .hero__links {
+    margin-right: 40px;
   }
 }
 @media screen and (max-width: 450px) {
