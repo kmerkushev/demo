@@ -1972,6 +1972,7 @@ img {
   display: flex;
   justify-content: center;
   font-family: Manrope, sans-serif;
+  background-color: #EDEDED;
   background-image: url("img/bg--asterisk.svg");
   background-repeat: no-repeat;
   background-position: 105% 105%;
@@ -2793,13 +2794,13 @@ img {
 }
 
 .plan__price-month {
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 700;
   color: var(--black);
   margin: 0;
 }
 .plan__price-month .plan__price-period {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
 }
 .plan__price-month--orange {
@@ -2813,7 +2814,7 @@ img {
   margin: 0;
 }
 .plan__price-dollars .plan__price-period {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -3078,8 +3079,8 @@ img {
     font-size: 21px;
   }
   .plan__prices {
-    flex-direction: row;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
   }
   .prices {
@@ -3089,8 +3090,9 @@ img {
     font-size: 36px;
   }
   .plan__prices {
-    flex-direction: row;
+    flex-direction: column;
     align-items: baseline;
+    align-items: center;
   }
   .plan--best::before {
     font-size: 12px;
