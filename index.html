@@ -7,6 +7,7 @@
 
   <title>SuperCZ</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="style.css" type="text/css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -37,6 +38,23 @@
 </head>
 
 <body class="page__body body">
+
+  <div class="body__popup popup visually-hidden" id="popup">
+    <button class="popup__close" id="closeVideo">
+      <span class="visually-hidden">Close video</span>
+    </button>
+    <video class="popup__video" id="video01" controls>
+      <source src="img/video.mp4" type="video/mp4">
+      <source src="img/video.webm" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+    <video class="popup__video" id="video02" controls>
+      <source src="img/superCZ_teaser.mp4" type="video/mp4">
+      <source src="img/superCZ_teaser.webm" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
   
   <header class="body__header header" id="header">
     <div class="header__inner">
@@ -63,11 +81,11 @@
     <section class="main__hero hero">
       <div class="hero__inner">
         <div class="hero__img-wrapper">
-          <img class="hero__img" src="img/cz.png" srcset="img/cz.png, img/cz@2x.png 2x" width="427" height="633" alt="CZ">
+          <img class="hero__img" src="img/cz.png" srcset="img/cz.png, img/cz@2x.png 2x" width="320" height="475" alt="CZ">
         </div>
         <div class="hero__text-wrapper">
           <h1 class="hero__h1">
-            Meet <span class="white">SuperCZ</span> — the true king of the upcoming bull run!
+            Meet <span class="white">SuperCZ</span> — the&nbsp;true king of the&nbsp;upcoming bull run!
           </h1>
           <a class="hero__btn btn" href="#">Start Game</a>
         </div>
@@ -158,6 +176,7 @@
 
         <div class="history__screenshot">
           <div class="history__phone-wrapper">
+            <button class="history__btn-play" id="btn-play-01"><span class="visually-hidden">Play Video</span></button>
             <img class="history__screen" src="img/screen-04.png" srcset="img/screen-04.png, img/screen-04@2x.png 2x" width="426" height="761" alt="phone">
           </div>
           <div class="history__phone-wrapper">
@@ -173,13 +192,13 @@
 
         <div class="history__screenshot">
           <div class="history__phone-wrapper">
-            <img class="history__screen" src="img/screen-07.png" srcset="img/screen-07.png, img/screen-07@2x.jpg png" width="426" height="742" alt="phone">
+            <img class="history__screen" src="img/screen-07.png" srcset="img/screen-07.png, img/screen-07@2x.png 2x" width="426" height="742" alt="phone">
           </div>
           <div class="history__phone-wrapper">
-            <img class="history__screen" src="img/screen-08.png" srcset="img/screen-08.png, img/screen-08@2x.jpg png" width="426" height="742" alt="phone">
+            <img class="history__screen" src="img/screen-08.png" srcset="img/screen-08.png, img/screen-08@2x.png 2x" width="426" height="742" alt="phone">
           </div>
           <div class="history__phone-wrapper">
-            <img class="history__screen" src="img/screen-09.png" srcset="img/screen-09.png, img/screen-09@2x.jpg png" width="426" height="742" alt="phone">
+            <img class="history__screen" src="img/screen-09.png" srcset="img/screen-09.png, img/screen-09@2x.png 2x" width="426" height="742" alt="phone">
           </div>
         </div>
       </div>
@@ -206,36 +225,79 @@
         
         
         <div class="games__columns">
-          <article>      
-            <h3 class="games__h3">CZ Crypto Clicker</h3>
-            <p class="games__p">Click on CZ's image to earn in-game coins. Use earned coins to purchase upgrades that automate and speed up the mining process</p>
-            
-            <h4 class="games__h4">Upgrade System</h4>
-            <p class="games__p">Click on CZ's image to earn in-game coins. Use earned coins to purchase upgrades that automate and speed up the mining process</p>
-            <ol class="games__p games__ol">
-              <li>Auto-clickers</li>
-              <li>Income multinpliers</li>
-              <li>Special bonuses (temporary speed boost, click multiplier)</li>
-            </ol>
+          <article class="games__column games__column-01">
+            <div>
+              <h3 class="games__h3">CZ Crypto Clicker</h3>
+              <p class="games__p">Click on CZ's image to earn in-game coins. Use earned coins to purchase upgrades that automate and speed up the mining process</p>
+              
+              <h4 class="games__h4">Upgrade System</h4>
+              <p class="games__p">Click on CZ's image to earn in-game coins. Use earned coins to purchase upgrades that automate and speed up the mining process</p>
+              <ol class="games__p games__ol">
+                <li>Auto-clickers</li>
+                <li>Income multinpliers</li>
+                <li>Special bonuses (temporary speed boost, click multiplier)</li>
+              </ol>
 
-            <h4 class="games__h4">Leaderboard</h4>
-            <p class="games__p">Compete with other players for top positions. Best players will receive additional rewards at main project launch</p>
+              <h4 class="games__h4">Leaderboard</h4>
+              <p class="games__p">Compete with other players for top positions. Best players will receive additional rewards at main project launch</p>
+            </div>    
+            
+            <div class="games__swiper swiper-container">
+              <div class="swiper">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div>
+                      <img class="swiper-slide__img" width="430" height="754" src="img/slide-01.png" srcset="img/slide-01.png, img/slide-01@2x.png 2x" alt="Slide">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <img class="swiper-slide__img" width="430" height="754" src="img/slide-02.png" srcset="img/slide-02.png, img/slide-02@2x.png 2x" alt="Slide">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <img class="swiper-slide__img" width="430" height="754" src="img/slide-03.png" srcset="img/slide-03.png, img/slide-03@2x.png 2x" alt="Slide">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <img class="swiper-slide__img" width="430" height="754" src="img/slide-04.png" srcset="img/slide-04.png, img/slide-04@2x.png 2x" alt="Slide">
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="swiper-pagination"></div>         
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+
           </article>
 
-          <article>
-            <h3 class="games__h3">Crypto Tower Mini-Game</h3>
-            <p class="games__p">Climb the tower floors, rescuing your mentor from a rogue AI. Each floor features unique challenges and battles with crypto monsters</p>
-            
-            <h4 class="games__h4">Level Progression Mechanics</h4>
-            <p class="games__p">Click on CZ's image to earn in-game coins. Use earned coins to purchase upgrades that automate and speed up the mining process</p>
-            <ol class="games__p games__ol">
-              <li>Monster battles</li>
-              <li>Floor conquest</li>
-              <li>Resource collection (coins, perks, weapons)</li>
-            </ol>
+          <article class="games__column games__column-02">
+            <div>
+              <h3 class="games__h3">Crypto Tower Mini‑Game</h3>
+              <p class="games__p">Climb the tower floors, rescuing your mentor from a rogue AI. Each floor features unique challenges and battles with crypto monsters</p>
+              
+              <h4 class="games__h4">Level Progression Mechanics</h4>
+              <p class="games__p">Click on CZ's image to earn in-game coins. Use earned coins to purchase upgrades that automate and speed up the mining process</p>
+              <ol class="games__p games__ol">
+                <li>Monster battles</li>
+                <li>Floor conquest</li>
+                <li>Resource collection (coins, perks, weapons)</li>
+              </ol>
 
-            <h4 class="games__h4">Reward System</h4>
-            <p class="games__p">Earn coins for each completed floor. Boss victories offer chances to obtain rare NFTs</p>
+              <h4 class="games__h4">Reward System</h4>
+              <p class="games__p">Earn coins for each completed floor. Boss victories offer chances to obtain rare NFTs</p>
+
+            </div>
+
+            <div class="games__video-wrapper">
+              <button class="games__btn-play" id="btn-play-02"><span class="visually-hidden">Play Video</span></button>
+              <img class="games__video" width="426" height="761" src="img/video-02.jpg" srcset="img/video-02.jpg, img/video-02@2x.jpg" width="426" height="761" alt="Tap to see gameplay">
+            </div>
+
           </article>
         </div>
 
@@ -260,10 +322,10 @@
 
           <div class="games__screenshot">
             <div class="games__phone-wrapper">
-              <img class="games__screen" src="img/game-01.png" srcset="game-01.png, img/game-01@2x.png 2x" width="426" height="742" alt="phone">
+              <img class="games__screen" src="img/game-01.png" srcset="img/game-01.png, img/game-01@2x.png 2x" width="426" height="742" alt="phone">
             </div>
             <div class="games__phone-wrapper">
-              <img class="games__screen" src="img/game-02.png" srcset="game-02.png, img/game-02@2x.png 2x" width="426" height="742" alt="phone">
+              <img class="games__screen" src="img/game-02.png" srcset="img/game-02.png, img/game-02@2x.png 2x" width="426" height="742" alt="phone">
             </div>
             <div class="games__phone-wrapper">
               <img class="games__screen" src="img/game-03.png" srcset="img/game-03.png, img/game-03@2x.png 2x" width="426" height="742" alt="phone">
@@ -307,7 +369,7 @@
 
     </section>
 
-<!--
+
     <section class="main__ticker ticker ticker--black" id="ticker-second">
       <div class="ticker__inner">
         <p class="ticker__text">POWERED BY SOLANA</p>
@@ -366,26 +428,28 @@
             <p class="toke__p">Place your NFTs in a special pool to earn additional $SuperCZ tokens. Rarer NFTs earn higher rewards</p>
           </div>
         </div>
-
-        <h3 class="toke__h3">Token Distribution</h3>
-        <p class="toke__h4">Total Supply: 1 000 000 000  $SuperCZ</p>
-        <p class="toke__h4">Distribution:</p>
-        <div class="toke__chart">
-          <img class="toke__img" src="img/chart.png" srcset="img/chart.png, img/chart@2x.png 2x" width="569" height="572" alt="Chart">
-          <ul class="toke__ul">
-            <li class="toke__li">70% (700 000 000 $SuperCZ) — Community Allocation</li>
-            <li class="toke__li">25% (2500 000 000 $SuperCZ) — Game rewards </li>
-            <li class="toke__li">5% (50 000 000 $SuperCZ) — Development team</li>
-          </ul>
-        </div>
+        
+        <div class="toke__distribution">
+          <h3 class="toke__h3">Token Distribution</h3>
+          <p class="toke__h4">Total Supply: 1 000 000 000  $SuperCZ</p>
+          <p class="toke__h4">Distribution:</p>
+          <div class="toke__chart">
+            <img class="toke__img" src="img/chart.png" srcset="img/chart.png, img/chart@2x.png 2x" width="569" height="572" alt="Chart">
+            <ul class="toke__ul">
+              <li class="toke__li">70% (700 000 000 $SuperCZ) — Community Allocation</li>
+              <li class="toke__li">25% (2500 000 000 $SuperCZ) — Game rewards </li>
+              <li class="toke__li">5% (50 000 000 $SuperCZ) — Development team</li>
+            </ul>
+          </div>
+        <div>
 
 
         <h3 class="toke__h3">Token Value Maintenance Mechanics</h3>
         <ul class="toke__p">
-          <li class="toke__li">Token Burning: 10% of all in-game transactions will be burned, reducing total supply</li>
-          <li class="toke__li">Staking: Option to freeze tokens for passive income and exclusive rewards</li>
-          <li class="toke__li">Limited Supply: No new emission planned after initial distribution</li>
-          <li class="toke__li">Regular Buybacks: Using part of project profits to buy tokens from the market</li>
+          <li class="toke__li"><span class="bold">Token Burning:</span> 10% of all in-game transactions will be burned, reducing total supply</li>
+          <li class="toke__li"><span class="bold">Staking:</span> Option to freeze tokens for passive income and exclusive rewards</li>
+          <li class="toke__li"><span class="bold">Limited Supply:</span> No new emission planned after initial distribution</li>
+          <li class="toke__li"><span class="bold">Regular Buybacks:</span> Using part of project profits to buy tokens from the market</li>
         </ul>
       </div>
     </section>
@@ -404,7 +468,9 @@
         <p class="ticker__text">POWERED BY SOLANA</p>
         <p class="ticker__text ticker__text--outline">POWERED BY SOLANA</p>
     </section>
--->
+
+
+
     <section class="main__amba amba">
       <div class="amba__inner">
         <h3 class="amba__h4">Ambassador Program</h3>
@@ -421,7 +487,7 @@
         <div class="amba__pics">
           <img class="amba__three" src="img/three.png" width="1140" height="713" srcset="img/three.png, img/three@2x.png 2x" alt="three smartphones">
           <div class="amba__qr-wrapper">
-            <img src="img/qr.svg" alt="qr-code">
+            <img class="amba__qr" src="img/qr.svg" alt="qr-code">
             <a class="btn" href="#">Start&nbsp;Game</a>
           </div>
         </div>
@@ -516,6 +582,114 @@
       timeout = setTimeout(isMenuOpened, delay);
     });
   </script>
+
+
+
+<script>
+  const btnPlay01 = document.querySelector(`#btn-play-01`);
+  const btnPlay02 = document.querySelector(`#btn-play-02`);
+
+  const popup = document.querySelector(`#popup`);
+
+  const video01 = document.querySelector(`#video01`);
+  const video02 = document.querySelector(`#video02`);
+
+  const closeVideoBtn = document.querySelector(`#closeVideo`);
+
+  const lockScroll = () => {
+    document.body.style.overflow = `hidden`;
+  }
+
+  const unlockScroll = () => {
+    document.body.style.overflow = ``;
+  }
+
+  const clickHandler = (evt) => {
+    popup.classList.remove(`visually-hidden`);
+    
+    if (evt.target.id === "btn-play-01") {
+      video02.classList.add('visually-hidden');
+    } else if (evt.target.id === "btn-play-02") {
+      video01.classList.add('visually-hidden');
+    }
+  
+
+    /* View in fullscreen */
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+    if (evt.target.id === "btn-play-01") {
+      video01.classList.remove('visually-hidden');
+      video01.play();
+    } else if (evt.target.id === "btn-play-02") {
+      video02.classList.remove('visually-hidden');
+      video02.play();
+    }
+    
+    lockScroll();
+  }
+
+
+  const closeVideo = () => {
+    video01.pause();
+    video02.pause();
+    popup.classList.add(`visually-hidden`);
+    video01.classList.add('visually-hidden');
+    video02.classList.add('visually-hidden');
+    unlockScroll();
+  }
+
+  const popupClickHandler = (evt) => {
+    if ((evt.target !== video01) || (evt.target !== video02)) {
+      closeVideo();
+    }
+  }
+
+  const keyPress = (e) => {
+    if(e.key === "Escape") {
+      closeVideo();
+    }
+  }
+
+  btnPlay01.addEventListener('click', clickHandler);
+  btnPlay02.addEventListener('click', clickHandler);
+  
+  closeVideoBtn.addEventListener('click', closeVideo);
+  popup.addEventListener('click', popupClickHandler);
+
+  document.body.addEventListener(`keydown`, keyPress);
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<script>
+  const swiper = new Swiper(".swiper", {
+      autoHeight: true,
+      effect: 'cards',
+      grabCursor: true,
+      initialSlide: 0,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+</script>
+
 
 </body>
 
